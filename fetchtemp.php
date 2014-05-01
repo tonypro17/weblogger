@@ -1,4 +1,7 @@
+
 <?php
+
+// This script just prints out the contents of the database
 
 $db = new SQLite3('temperatures.db') or die('Unable to open database');
 
