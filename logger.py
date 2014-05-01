@@ -15,7 +15,7 @@ def temperature():
         return rvalue
 
 try:
-	db = sqlite3.connect('temperatures.db')
+	db = sqlite3.connect('/home/pi/Desktop/331proj2/temperatures.db')
 	
 	now = datetime.datetime.now()
 	time = now.strftime("%H:%M:%S")
@@ -31,7 +31,4 @@ except sqlite3.Error, e:
 	print "Error %s:" % e.args[0]
 	sys.exit(1)
 
-finally:
-	
-	if db:
-		db.close()
+	db.close()
